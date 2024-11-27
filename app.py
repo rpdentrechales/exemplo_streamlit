@@ -4,7 +4,14 @@ import streamlit as st
 page_1 = st.Page(
     "views/page_1.py",
     title="Sample Page 1",
-    icon=":material/thumb_up:",
+    icon=":material/thumb_up:"
+)
+
+# --- PAGE SETUP ---
+page_2 = st.Page(
+    "views/page_2.py",
+    title="Sample Page 2",
+    icon=":material/home:",
     default=True,
 )
 
@@ -14,7 +21,7 @@ page_1 = st.Page(
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
     {
-        "Pages": [page_1]
+        "Pages": [page_1,page_2]
     }
 )
 
