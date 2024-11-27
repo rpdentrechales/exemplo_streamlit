@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import random
 
+@st.cache_data
 def gerar_dados_fakes():
   # Generate a sample DataFrame
   np.random.seed(42)
