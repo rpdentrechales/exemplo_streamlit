@@ -5,7 +5,10 @@ from auxiliar.aux_vendas import *
 st.title("Teste Streamlit - Página 2")
 df = gerar_dados_fakes()
 
-seletor_mes = st.selectbox("Selecione um mês", df['Month'].unique())
+lista_de_meses = df['Month'].unique()
+lista_de_meses.insert(0, 'Todos')
+
+seletor_mes = st.selectbox("Selecione um mês", lista_de_meses)
 
 filtered_df = df.loc[df['Month'] == seletor_mes]
 
