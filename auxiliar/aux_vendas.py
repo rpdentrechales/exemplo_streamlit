@@ -17,6 +17,6 @@ def gerar_dados_fakes():
   }
 
   df = pd.DataFrame(data)
-  df['Month'] = df['Date'].dt.strftime('%MMM')
+  df['Month'] = df['Date'].dt.strftime('%MM')
 
   return df
