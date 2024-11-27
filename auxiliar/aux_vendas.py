@@ -4,10 +4,9 @@ import numpy as np
 import random
 
 @st.cache_data
-def gerar_dados_fakes():
+def gerar_dados_fakes(rows):
   # Generate a sample DataFrame
   np.random.seed(42)
-  rows = 100  # Number of rows in the DataFrame
 
   data = {
       "Date": pd.date_range(start="2023-01-01", periods=rows, freq="D"),

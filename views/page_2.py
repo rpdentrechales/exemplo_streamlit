@@ -3,7 +3,7 @@ from auxiliar.aux_vendas import *
 
 
 st.title("Teste Streamlit - Página 2")
-df = gerar_dados_fakes()
+df = gerar_dados_fakes(1000)
 
 lista_de_meses = list(df['Month'].unique())
 lista_de_meses.insert(0, 'Todos')
