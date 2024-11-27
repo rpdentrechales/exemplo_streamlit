@@ -19,11 +19,11 @@ filtered_df = df
 if seletor_mes == 'Todos':
   pass
 else:
-  filtered_df = df.loc[df['Month'] == seletor_mes]
+  filtered_df = filtered_df.loc[df['Month'] == seletor_mes]
 
 if seletor_categoria == 'Todos':
   pass
 else:
-  filtered_df = df.loc[df['Category'] == seletor_categoria]
+  filtered_df = filtered_df.loc[df['Category'] == seletor_categoria]
 
 st.dataframe(filtered_df,use_container_width= True)
