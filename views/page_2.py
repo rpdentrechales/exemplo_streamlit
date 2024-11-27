@@ -11,8 +11,12 @@ lista_de_meses.insert(0, 'Todos')
 lista_de_categorias = list(df['Category'].unique())
 lista_de_categorias.insert(0, 'Todos')
 
-seletor_mes = st.selectbox("Selecione um mês", lista_de_meses)
-seletor_categoria = st.selectbox("Selecione uma categoria", lista_de_categorias)
+col_1, col_2 = st.columns(2)
+
+with col_1:
+  seletor_mes = st.selectbox("Selecione um mês", lista_de_meses)
+with col_2:
+  seletor_categoria = st.selectbox("Selecione uma categoria", lista_de_categorias)
 
 filtered_df = df
 
